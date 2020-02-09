@@ -1,3 +1,6 @@
+# WeChatMiniApp-activity-master
+## 微信小程序大赛，活动小总管
+
 ### 部署指南
 
 1. 通过 SSH 连接上云服务器，直接使用包管理工具 yum 安装 Nginx：
