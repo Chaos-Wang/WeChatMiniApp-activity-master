@@ -1,0 +1,19 @@
+<!--pages/my/my.wxml-->
+<view class="userinfo">
+  <button wx:if="{{!logged && canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class="userinfo-btn"> 点击微信授权 </button>
+  <block wx:else>
+    <image bindtap="" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </block>
+</view>
+<i-cell-group>
+    <i-cell title="我的活动" is-link url="./past/past" link-type="navigateTo" >
+      <i-icon slot="icon" type="createtask_fill" size="25" color="#80848f" />
+    </i-cell>
+    <i-cell title="版本信息" is-link url="./version/version" link-type="navigateTo">
+      <i-icon slot="icon" type="prompt_fill" size="25" color="#80848f" />
+    </i-cell>
+    <i-cell title="联系我们" is-link url="./contactus/contactus" link-type="navigateTo">
+      <i-icon slot="icon" type="customerservice_fill" size="25" color="#80848f" />
+    </i-cell>
+</i-cell-group>

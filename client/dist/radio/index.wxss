@@ -1,0 +1,9 @@
+.i-radio-cell::after{display:block}.i-radio-radio-left{float:left}.i-radio-radio-right{float:right}.i-radio-radio{vertical-align:middle}.i-radio-title{display:inline-block;vertical-align:middle;}
+.image{
+  width: 60rpx; 
+  height: 60rpx; 
+  border-radius: 50%;
+  display:inline-block;
+  vertical-align:middle;
+  margin-right: 20rpx;
+}

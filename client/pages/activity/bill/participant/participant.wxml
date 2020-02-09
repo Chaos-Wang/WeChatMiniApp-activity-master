@@ -1,0 +1,8 @@
+<!--pages/bill/participant/participant.wxml-->
+<i-panel>
+    <i-checkbox-group current="{{current}}" bindchange="handlePartiChange">
+        <i-checkbox wx:for="{{participant}}" position="{{position}}" wx:key="{{item.id}}" value="{{item.name}}" imageSrc="{{item.src}}" > <!-- 将原生组件checkbox修改 -->
+        </i-checkbox>
+    </i-checkbox-group>
+</i-panel>
+<i-button bind:click="submit" type="info" shape="circle" size="small">确定</i-button>

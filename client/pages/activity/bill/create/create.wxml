@@ -1,0 +1,31 @@
+<!--pages/bill/create/create.wxml-->
+<i-panel>
+      <i-input value="{{ billMoney }}" type="number" title="金额" autofocus placeholder="请输入金额(最多10位)" maxlength='10' bindchange="bindInputChange1" />
+      <picker
+         mode="date"
+         value="{{billDate}}"
+         bindchange="bindDateChange"
+      >
+      <i-cell title="时间" is-link value="{{billDate}}"></i-cell>
+      </picker>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <i-cell title="类型" is-link value="{{array[index]}}"></i-cell>
+      </picker>
+            
+      <i-input value="{{ billDetail }}" type="textarea" title="备注" placeholder="最多150字" bindchange="bindInputChange2" maxlength="150" />
+      <i-cell title="是否公账">
+        <i-switch value="{{ billPublic }}" bind:change="onChange" slot="footer">
+            <i-icon type="right" slot="open"></i-icon>
+            <i-icon type="close" slot="close"></i-icon>
+        </i-switch>
+      </i-cell>
+      <view wx:if="{{billPublic}}">
+      <i-cell title="参与人" is-link bindtap='naviToParticipant'></i-cell>
+      <i-cell title="付款人" is-link bindtap='naviToPayer' value="{{payer.name}}"></i-cell>
+      </view>
+
+</i-panel>
+
+<i-button bind:click="submit" type="info" shape="circle" size="small">完成</i-button>
+<i-toast id="toast" />
+

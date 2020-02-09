@@ -1,0 +1,27 @@
+/* pages/check/check.wxss */
+.start-record {
+  box-sizing: border-box;
+  position: fixed;
+  background-color: #5cadff;
+  bottom: 40rpx;
+  right: 36rpx;
+  padding: 10rpx 36rpx;
+  border-radius: 48rpx;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3rpx 20rpx;
+  display: flex;
+  align-items: center;
+  width: 300rpx;
+}
+
+.start-record > image {
+  width: 42rpx;
+  height: 42rpx;
+}
+
+.start-record > .desc {
+  color: #fff;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-left: 10rpx;
+  padding-bottom: 4rpx;
+}

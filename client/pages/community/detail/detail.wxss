@@ -1,0 +1,136 @@
+/* pages/location/event/event.wxss */
+.container {
+  background: #fff;
+}
+scroll-view{
+  height: 93vh;
+}
+button::after {
+    border-radius: 0;
+}
+button{
+    border-radius: 0;
+}
+.event-poster {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f8f8f8;
+  white-space: nowrap;
+}
+
+.poster-spacing {
+  margin:  0rpx 0rpx 10rpx 0rpx;
+  padding: 0rpx 30rpx 0rpx 30rpx;
+}
+
+.event-session-spacing {
+  margin: 20rpx 0rpx 20rpx 0rpx;
+  padding: 0rpx 30rpx 0rpx 30rpx;
+}
+
+.event-poster .poster {
+  width: 100%;
+  height: 500rpx;
+}
+
+.action-icon {
+  width: 32rpx;
+  height: 32rpx;
+  margin: 10rpx;
+  vertical-align: bottom;
+  display: inline-block;
+}
+
+.action-upload {
+  width: 175rpx;
+  height: 175rpx;
+  margin: 10rpx;
+  vertical-align: bottom;
+  display: inline-block;
+}
+
+.clear{
+  display: flex;
+  flex-direction: column;
+  height:10rpx;
+  background: #eeeeee;
+}
+
+.top-info{
+  margin:15rpx 20rpx;
+  overflow: hidden; 
+  font-size: 32rpx;
+  color:#222;
+}
+.toin-info{
+  line-height: 60rpx;
+  font-size: 28rpx;
+}
+.in-title{
+  font-size: 32rpx;
+  color:#404040;
+  line-height: 60rpx;
+  padding-left:20rpx;
+  margin-left: 10rpx; 
+  border-left: 10rpx solid #81aaf7;
+  border-bottom: 1rpx solid #eeeeee;
+}
+.in-info{
+  font-size: 26rpx;
+  color:#606060;
+  line-height: 40rpx;
+  padding:5rpx 10rpx 10rpx 15rpx;
+}
+.btn{
+  position: fixed;
+  bottom: 0;
+  display: inline-flex;
+}
+.btn1{
+  height: 7vh;
+  width: 125rpx;
+  margin-top: 20rpx;
+  background-color: #fff;
+  color: #999999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 24rpx;
+}
+.btnText{
+  margin: -12rpx 0 -18rpx 0;
+}
+.btn2
+{
+  height: 7vh;
+  width: 503rpx;
+  right: 0;
+  position: fixed;
+  bottom: 0;
+  font-size: 34rpx;
+  background-color:#5cadff;
+  color: #fff;
+}
+
+.btnImg {
+  width: 50rpx;
+  height: 50rpx;
+}
+ 
+.past-empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #8a8a8a;
+  font-size: 24rpx;
+  width:100%;
+  height:100%;
+  position:  absolute
+}
+.past-empty .empty-image {
+  width: 150rpx;
+  height: 150rpx;
+}

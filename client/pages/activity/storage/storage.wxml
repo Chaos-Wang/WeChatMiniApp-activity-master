@@ -1,0 +1,17 @@
+<view class = "container">
+  <view class = "additem">
+    <view class = "add">
+      <image class = 'plus' src = '../../../images/plus.png' />
+      <input value = "{{input}}" auto-focus  class = "InputAdd" placeholder="输入信息，回车即可添加" bindinput='AddInput' bindconfirm='AddConfirm'/>
+    </view>  
+  </view>
+
+  <view class = "infos">
+    <view class = "info">
+      <view class = "info-item" wx:for = "{{InfoList}}" wx:key="{{ index }}"  id = "{{index}}">
+        <text class = "itemdescriptiont">{{item.description}}</text>
+        <icon class = 'itemremove' type = 'clear' size = '20' color = "white" bindtap="remove" id = '{{index}}' />
+      </view>
+    </view>
+  </view>
+</view>

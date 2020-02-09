@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "公账",
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor":"#ffffff",
+    "usingComponents": {
+    "i-action-sheet": "../../../dist/action-sheet/index",
+    "i-button": "../../../dist/button/index",
+    "i-message": "../../../dist/message/index"
+  }
+}

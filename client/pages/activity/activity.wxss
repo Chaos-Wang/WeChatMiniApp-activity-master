@@ -1,0 +1,314 @@
+
+.container{
+  background-color:#fefefe;
+  width: 100%;
+}
+.header{
+   background-color:#fff;
+  height: 200rpx;
+  margin: 0 30rpx 30rpx 30rpx;
+  padding: 2rpx 10rpx 10rpx 10rpx;
+  border-radius: 18rpx;
+  box-shadow: 0 6rpx 24rpx rgba(25, 118, 210, 0.08);
+}
+
+.subtitle {
+  display: flex;
+  align-content: center;
+  font-size: 30rpx;
+  color: #45A1FF;
+  font-weight: bold;
+  margin: 0rpx 20rpx;
+}
+
+.name{
+  height: 70rpx;
+  margin: 10rpx 8px 15rpx 0;
+}
+.act-name {
+  color:#000000;
+  font-size:44rpx;
+  line-height: 80rpx;
+  font-weight:bold;
+  padding-left: 20rpx;
+}
+.time{
+  height: 46rpx;
+  margin-left: 16rpx;
+}
+.act-time{
+  color: #777;
+  border-radius: 4rpx;
+  padding: 0 10rpx 2rpx 10rpx;
+  background-color: #efefef;
+  box-sizing: border-box;
+  font-size:28rpx;
+  width: 100%;
+}
+
+.peer{
+  height: 60rpx;
+  margin-left: 20rpx;
+  position:relative;
+}
+.act-peer{
+  line-height: 60rpx;
+  width: 200rpx;
+  color: #000000;
+  font-size:32rpx;
+  display: block;
+}
+.act-photo{
+  height: 70rpx;
+  line-height: 70rpx;
+  width: 450rpx;
+  color: white;
+  font-size:14pt;
+  position:absolute;
+  margin-left: 200rpx;
+  top: 0;
+  display:inline-block;
+  overflow:scroll;
+  clear: both;
+}
+.photo{
+  display:inline-block;
+  line-height: 70rpx;
+  width: 70rpx;
+  height: 70rpx;
+  text-align: center;
+}
+.avator{
+  width: 60rpx;
+  height: 60rpx; 
+  border-radius: 100%; 
+  border:1rpx solid #999;
+}
+
+.text{
+  line-height: 70rpx;
+  text-align: center;
+  position:absolute;
+  right: 0;
+  top: 0;
+  width: 70rpx;
+  height: 70rpx;
+ 
+}
+
+/*功能模块*/
+.fun{
+    height: 100%;
+}
+.grids {  
+    margin: 10rpx 30rpx 30rpx 30rpx;
+  background-color: #fff;
+  position: relative;  
+  overflow: hidden;  
+}  
+.grids:before {  
+  content: " ";  
+  position: absolute;  
+  left: 0;  
+  top: 0;  
+  right: 0;  
+  height: 1px;  
+  border-top: 1px solid #fff;  
+  color: #fff;
+  -webkit-transform-origin: 0 0;  
+          transform-origin: 0 0;  
+  -webkit-transform: scaleY(0.5);  
+          transform: scaleY(0.5);  
+}  
+.grids:after {  
+  content: " ";  
+  position: absolute;  
+  left: 0;  
+  top: 0;  
+  width: 1px;  
+  bottom: 0;  
+  border-left: 1px solid #fff;  
+  color: #fff;  
+  -webkit-transform-origin: 0 0;  
+          transform-origin: 0 0;  
+  -webkit-transform: scaleX(0.5);  
+          transform: scaleX(0.5);  
+}  
+.grid {  
+  position: relative;  
+  float: left;  
+  padding: 20px 10px;  
+  width: 33.33333333%;  
+  box-sizing: border-box;  
+}  
+.grid:before {  
+  content: " ";  
+  position: absolute;  
+  right: 0;  
+  top: 0;  
+  width: 1px;  
+  bottom: 0;  
+  border-right: 1px solid #fff;  
+  color: #fff;  
+  -webkit-transform-origin: 100% 0;  
+          transform-origin: 100% 0;  
+  -webkit-transform: scaleX(0.5);  
+          transform: scaleX(0.5);  
+}  
+.grid:after {  
+  content: " ";  
+  position: absolute;  
+  left: 0;  
+  bottom: 0;  
+  right: 0;  
+  height: 1px;  
+  border-bottom: 1px solid #fff;  
+  color: #fff;  
+  -webkit-transform-origin: 0 100%;  
+          transform-origin: 0 100%;  
+  -webkit-transform: scaleY(0.5);  
+          transform: scaleY(0.5);  
+}  
+.grid:active {  
+  background-color: #ECECEC;  
+}  
+.grid__icon {  
+  width: 32px;  
+  height: 32px;  
+  margin: 0 auto;  
+}  
+.grid__icon + .grid__label {  
+  margin-top: 5px;  
+}  
+.grid__label {  
+  display: block;  
+  text-align: center;  
+  font-weight: bold;  
+  color: #000000;  
+  font-size: 14px;  
+  white-space: nowrap;  
+  text-overflow: ellipsis;  
+  overflow: hidden;  
+} 
+ .round-click{
+    height: 120rpx;
+    width: 120rpx;
+    background-color:#5cadff;
+    border-radius: 100%;
+    position: fixed;
+    bottom: 150rpx;
+    right: 20rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9;
+}
+.round-click navigator{
+    font-size: 32rpx;
+    max-width: 80rpx;
+    color: #fff;
+    text-align: center;
+}
+.past-empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #8a8a8a;
+  font-size: 24rpx;
+  width:100%;
+  height:100%;
+  position:  absolute
+}
+.past-empty .empty-image {
+  width: 150rpx;
+  height: 150rpx;
+}
+.grids {  
+  position: relative;  
+  overflow: hidden;  
+}  
+.grids:before {  
+  content: " ";  
+  position: absolute;  
+  left: 0;  
+  top: 0;  
+  right: 0;  
+  height: 1px;  
+  border-top: 1px solid #D9D9D9;  
+  color: #D9D9D9;  
+  -webkit-transform-origin: 0 0;  
+          transform-origin: 0 0;  
+  -webkit-transform: scaleY(0.5);  
+          transform: scaleY(0.5);  
+}  
+.grids:after {  
+  content: " ";  
+  position: absolute;  
+  left: 0;  
+  top: 0;  
+  width: 1px;  
+  bottom: 0;  
+  border-left: 1px solid #D9D9D9;  
+  color: #D9D9D9;  
+  -webkit-transform-origin: 0 0;  
+          transform-origin: 0 0;  
+  -webkit-transform: scaleX(0.5);  
+          transform: scaleX(0.5);  
+}  
+.grid {  
+  position: relative;  
+  float: left;  
+  padding: 20px 10px;  
+  width: 33.33333333%;  
+  box-sizing: border-box;  
+}  
+.grid:before {  
+  content: " ";  
+  position: absolute;  
+  right: 0;  
+  top: 0;  
+  width: 1px;  
+  bottom: 0;  
+  border-right: 1px solid #D9D9D9;  
+  color: #D9D9D9;  
+  -webkit-transform-origin: 100% 0;  
+          transform-origin: 100% 0;  
+  -webkit-transform: scaleX(0.5);  
+          transform: scaleX(0.5);  
+}  
+.grid:after {  
+  content: " ";  
+  position: absolute;  
+  left: 0;  
+  bottom: 0;  
+  right: 0;  
+  height: 1px;  
+  border-bottom: 1px solid #D9D9D9;  
+  color: #D9D9D9;  
+  -webkit-transform-origin: 0 100%;  
+          transform-origin: 0 100%;  
+  -webkit-transform: scaleY(0.5);  
+          transform: scaleY(0.5);  
+}  
+.grid:active {  
+  background-color: #ECECEC;  
+}  
+.grid__icon {  
+  width: 32px;  
+  height: 32px;  
+  margin: 0 auto;  
+}  
+.grid__icon + .grid__label {  
+  margin-top: 5px;  
+}  
+.grid__label {  
+  display: block;  
+  text-align: center;  
+  font-weight: bold;  
+  color: #000000;  
+  font-size: 14px;  
+  white-space: nowrap;  
+  text-overflow: ellipsis;  
+  overflow: hidden;  
+}  

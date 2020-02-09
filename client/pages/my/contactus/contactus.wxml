@@ -1,0 +1,5 @@
+
+<view style="margin: 16px">Contact Us</view>
+<i-card title="Github" thumb="https://wx.qlogo.cn/mmopen/vi_32/aEicXfvicmChdpOstaWibMFXcpsA4P3TRVTY7opFK6X6dpEBaMyXBIoBOPrZIGE1CckREOOmzicqMkPCSItHjdevXw/132">
+    <view slot="content">You can contact us on Github</view>
+</i-card>

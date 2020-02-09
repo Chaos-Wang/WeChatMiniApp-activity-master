@@ -1,0 +1,78 @@
+<i-tabs current="{{ current }}" bindchange="handleChange">
+    <i-tab key="tab1" title="已报名"></i-tab>
+    <i-tab key="tab2" title="进行中"></i-tab>
+    <i-tab key="tab3" title="已结束"></i-tab>
+</i-tabs>
+
+<view wx:if='{{tab[0]}}'>
+<view wx:if='{{!empty[0]}}'>
+  <block wx:for-items="{{ac[0]}}" wx:for-item="list" wx:key="list.ac_id" >
+    <view class="list" data-id="{{list.ac_id}}" bindtap='navigateToDetail' data-acInfo="{{list}}">
+      <view class="list-img">
+        <image class="video-img" mode="aspectFill" src="{{list.imgUrl}}"></image>
+      </view>
+      <view class="list-detail">
+        <view class="list-title"><text>{{list.acInfo.acName}}</text></view>
+        <view class="list-info"><text>活动时间：</text><text>{{list.acInfo.startTime}}</text></view>
+      </view> 
+       <view class="list-tag"><view class="state">招募中</view></view>
+    </view>
+  </block>
+</view>
+
+<view wx:else>
+ <view class='past-empty'>
+    <image class='empty-image' src='../../../images/past-empty.png'></image>
+    <text>这里是没有内容的荒原</text>
+  </view>
+</view>
+
+</view>
+
+
+<view wx:if='{{tab[1]}}'>
+<view wx:if='{{!empty[1]}}'>
+  <block wx:for-items="{{ac[1]}}" wx:for-item="list" wx:key="list.ac_id" >
+    <view class="list" data-id="{{list.ac_id}}" bindtap='navigateToDetail' data-acInfo="{{list}}">
+      <view class="list-img">
+        <image class="video-img" mode="aspectFill" src="{{list.imgUrl}}"></image>
+      </view>
+      <view class="list-detail">
+        <view class="list-title"><text>{{list.acInfo.acName}}</text></view>
+        <view class="list-info"><text>活动时间：</text><text>{{list.acInfo.deadlineTime}}</text></view>
+      </view> 
+       <view class="list-tag"><view class="state">进行中</view></view>
+    </view>
+  </block>
+</view>
+
+<view wx:else>
+ <view class='past-empty'>
+    <image class='empty-image' src='../../../images/past-empty.png'></image>
+    <text>这里是没有内容的荒原</text>
+  </view>
+</view>
+</view>
+
+<view wx:if='{{tab[2]}}'>
+<view wx:if='{{!empty[2]}}'>
+  <block wx:for-items="{{ac[2]}}" wx:for-item="list" wx:key="list.ac_id" >
+    <view class="list" data-id="{{list.ac_id}}" bindtap='navigateToDetail' data-acInfo="{{list}}">
+      <view class="list-img">
+        <image class="video-img" mode="aspectFill" src="{{list.imgUrl}}"></image>
+      </view>
+      <view class="list-detail">
+        <view class="list-title"><text>{{list.acInfo.acName}}</text></view>
+        <view class="list-info"><text>活动时间：</text><text>{{list.acInfo.startTime}}</text></view>
+      </view> 
+       <view class="list-tag"><view class="state">已结束</view></view>
+    </view>
+  </block>
+</view>
+<view wx:else>
+ <view class='past-empty'>
+    <image class='empty-image' src='../../../images/past-empty.png'></image>
+    <text>这里是没有内容的荒原</text>
+  </view>
+</view>
+</view>

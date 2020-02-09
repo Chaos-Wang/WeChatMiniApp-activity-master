@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "i-button": "../../../dist/button/index",
+    "i-cell": "../../../dist/cell/index",
+    "i-panel": "../../../dist/panel/index",
+    "i-toast": "../../../dist/toast/index"
+  },
+  "navigationBarTitleText": "活动图片"
+}

@@ -1,0 +1,53 @@
+<view wx:if="{{!bool_ing}}"> 
+  <view class='past-empty'>
+    <image class='empty-image' src='../../images/past-empty.png'></image>
+    <text>暂时没有活动正在进行呢~</text>
+    <text>点击悬浮按钮可以创建新活动</text>
+  </view>
+
+  <view class="round-click">
+    <navigator url='./create/create' >点击创建</navigator >
+  </view>
+</view>
+
+<view wx:else>
+<view class='container'>
+    <view class='name'>
+      <text class="act-name">{{ac_info.acInfo.acName}}</text>
+    </view>
+    <view class="subtitle">详细信息</view>
+  <view class='header'>
+    <view class='peer'>
+      <text class="act-peer">活动参与者</text>
+      <view class="act-photo">
+      <view class="photo" wx:for="{{imgUrl}}" wx:for-item="item" wx:key="src">
+      <image class="avator"
+          mode="aspectFit"
+          src="{{item}}"
+        ></image>    
+      </view>
+      </view>
+      </view> 
+    <view class='time'>
+      <text class="act-time">报名截止时间:{{ac_info.acInfo.deadlineTime}}</text>
+    </view>
+    <view class="time">
+      <text class="act-time">活动开始时间:{{ac_info.acInfo.startTime}}</text>
+    </view>
+  </view>
+<view class="subtitle">活动功能</view>
+<view class="fun">  
+  <view class="grids">  
+    <view class="grid" wx:for="{{routers}}" wx:key="name">  
+      <navigator url="{{item.url}}">  
+        <view class="grid__icon">  
+          <i-icon type="{{item.type}}" size="28" color="#5cadff" />
+        </view>  
+        <text class="grid__label">{{item.name}}</text>  
+      </navigator>  
+    </view>  
+  </view>  
+</view>  
+
+</view>
+</view>

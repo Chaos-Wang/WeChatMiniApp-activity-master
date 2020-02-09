@@ -1,0 +1,90 @@
+<i-panel title="发起人信息">
+
+      <i-input value="{{ creatorName }}" title="组织者" autofocus placeholder="请输入组织者姓名" bindchange="bindInputChange1" maxlength="16"/>
+      <i-input value="{{ creatorTele }}" type="number" title="联系电话（必填）" placeholder="请输入组织者联系电话" bindchange="bindInputChange2" maxlength="13"/>
+      <i-input value="{{ creatorWeChat }}" type="textarea" title="组织者微信号" placeholder="请输入微信ID" bindchange="bindInputChange3" maxlength="13"/>
+
+</i-panel>
+
+
+<i-panel title="活动信息">
+
+      <i-input value="{{ acName }}" title="活动名称（必填）" autofocus placeholder="请输入活动名称" bindchange="bindInputChange4" maxlength="16"/>
+      <i-input value="{{ acNum }}" type="number" title="人数上限（必填）" placeholder="请输入活动最大人数" bindchange="bindInputChange5" maxlength="3"/>
+      <i-input value="{{ acDetailInfo }}" type="textarea" title="活动备注" placeholder="请输入活动备注(最多150字)" bindchange="bindInputChange6" maxlength="150" />
+
+
+      <picker
+         mode="date"
+         value="{{startDate}}"
+         start="{{initDate}}"
+         bindchange="bindDateChange1"
+      >
+      <i-cell title="活动开始日期（必填）" is-link value="{{startDate}}"></i-cell>
+      </picker>
+
+       <picker
+          mode="time"
+          value="{{startTime}}"
+          start="00:00"
+          end="23:59"
+          bindchange="bindTimeChange1"
+      >
+      <i-cell title="活动开始时间" is-link value="{{startTime}}"></i-cell>
+      </picker>
+
+      <picker
+         mode="date"
+         value="{{deadlineDate}}"
+         start="{{initDate}}"
+         bindchange="bindDateChange2"
+      >
+      <i-cell title="报名截至日期（必填）" is-link value="{{deadlineDate}}"></i-cell>
+      </picker>
+
+       <picker
+          mode="time"
+          value="{{deadlineTime}}"
+          start="00:00"
+          end="23:59"
+          bindchange="bindTimeChange2"
+      >
+      <i-cell title="报名截止时间" is-link value="{{deadlineTime}}"></i-cell>
+      </picker>
+
+      <i-cell title="活动地址（必填）" is-link value="{{acAddress=='点击选择'?acAddress:acAddress.name}}" bindtap='getLocation'></i-cell>
+
+</i-panel>
+
+
+<i-cell title="是否公开招募">
+        <i-switch value="{{ acPublic }}" bind:change="onChange1" slot="footer">
+            <i-icon type="right" slot="open"></i-icon>
+            <i-icon type="close" slot="close"></i-icon>
+        </i-switch>
+</i-cell>
+
+
+  <i-cell title="图片上传(至少一张作为封面)（{{uploaderNum}}/9）">
+    <i-switch value="{{ switch1 }}" bind:change="onChange2" slot="footer">
+      <i-icon type="right" slot="open"></i-icon>
+      <i-icon type="close" slot="close"></i-icon>
+    </i-switch>
+  </i-cell>
+
+  <i-cell>
+    <block wx:if="{{ switch1 }}">
+        <view class='ui_uploader_cell'>
+          <view class='ui_uploader_item' wx:for="{{uploaderList}}" wx:key="{{index}}">
+          <icon class='ui_uploader_item_icon' bindtap='clearImg' data-index="{{index}}" type="clear" size="20" color="red"/>
+          <image bindtap='showImg' data-index="{{index}}" src='{{item}}'></image>
+          </view>
+          <view class='ui_uploader' bindtap='upload' wx:if="{{showUpload}}"></view>
+        </view>
+      </block>
+  </i-cell>
+
+
+
+<i-button bind:click="submit" type="info" shape="circle" size="small">创建</i-button>
+<i-toast id="toast" />

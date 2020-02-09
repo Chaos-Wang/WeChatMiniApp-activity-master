@@ -1,0 +1,35 @@
+<!--pages/check/mcheck/mcheck.wxml-->
+<i-tabs current="{{ current }}" bindchange="handleChange">
+    <i-tab key="tab1" title="已签到"></i-tab>
+    <i-tab key="tab2" title="未签到"></i-tab>
+</i-tabs>
+
+<view wx:if='{{tab1}}'>
+<view wx:if='{{checked.length}}'>
+<view wx:for='{{checked}}'>
+<i-card extra="{{item.userNickName}}" thumb="{{item.userAvatar}}">
+</i-card>
+</view>
+</view>
+<view wx:else>
+ <view class='past-empty'>
+    <image class='empty-image' src='../../../../images/past-empty.png'></image>
+    <text>还没有人签到~</text>
+</view>
+</view>
+</view>
+
+<view wx:if='{{tab2}}'>
+<view wx:if='{{unchecked.length}}'>
+<view wx:for='{{unchecked}}'>
+<i-card extra="{{item.userNickName}}" thumb="{{item.userAvatar}}">
+</i-card>
+</view>
+</view>
+<view wx:else>
+ <view class='past-empty'>
+    <image class='empty-image' src='../../../../images/past-empty.png'></image>
+    <text>这里什么都没有~</text>
+</view>
+</view>
+</view>

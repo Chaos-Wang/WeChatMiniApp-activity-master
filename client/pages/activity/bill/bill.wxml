@@ -1,0 +1,67 @@
+<view class="header">{{header}}
+    <image wx:if="{{index==1}}" mode="aspectFit" bind:tap="onBillAccount" class="settle" src="../../../images/freshbill.png"></image>
+</view>
+
+  <!-- 记录列表 -->
+  <view class="subtitle" bindtap="handleOpen">账本切换
+  <image src="../../../images/tri.png" mode="aspectFit" class="sheet"></image>
+  </view>
+  <i-action-sheet visible="{{ visible }}" actions="{{ actions }}" bind:click="handleClickItem" />
+<i-message id="message" />
+
+<view wx:if="{{index==1}}">
+  <view class="total">
+  <text>小伙伴总消费: <text class="total-detail">{{totalCount}}元</text></text>
+  <text>其中我的消费: <text class="total-detail">{{totalCountOfMine}}元</text></text>
+  <text>其中我的付款: <text class="total-detail">{{publicCountOfMine}}元</text></text>
+  </view>
+  <view class="record-container" wx:if="{{publicList.length}}">
+    <view class="record" wx:for="{{publicList}}" wx:key="billId">
+      <view class="record-content">
+        <view class="tags">{{item.billInfo.billInfo.billDate}}</view>
+        <view class="record-title">{{item.billInfo.billInfo.billType}}(共{{item.billInfo.billInfo.participant.length}}人)</view>
+        <view class="unit">{{item.billInfo.billInfo.billDetail}}</view>
+      </view>
+      <view class="record-duration">
+        <view class="num">{{item.billInfo.billInfo.billMoney}}元</view>
+        <view class="unit">由{{item.nickName}}支付</view>
+      </view>
+   </view>   
+    </view>
+  <view wx:else>
+     <view class='record-empty'>
+       <image mode="aspectFul" class='empty-image' src='../../../images/empty.png'></image>
+       <text>什么也没有耶，点击记一笔吧~</text>
+     </view>
+  </view>
+ </view>
+
+
+<view wx:else if="{{index==0}}">
+  <view class="total">
+    <text>我的消费: <text class="total-detail">{{personalCount}}元</text></text>
+  </view>
+  <view class="record-container" wx:if="{{personalList.length}}">
+    <view class="record" wx:for="{{personalList}}" wx:key="billId">
+      <view class="record-content">
+        <view class="record-title">{{item.billInfo.billInfo.billType}}</view>
+        <view class="tags">{{item.billInfo.billInfo.billDate}}</view>
+      </view>
+      <view class="record-duration">
+        <view class="num">{{item.billInfo.billInfo.billMoney}}元</view>
+      </view>
+   </view>   
+  </view>
+  <view wx:else>
+     <view class='record-empty'>
+       <image mode="aspectFul" class='empty-image' src='../../../images/past-empty.png'></image>
+       <text>什么也没有耶，点击记一笔吧~</text>
+     </view>
+  </view>
+</view>
+
+  <view class="start-record" bind:tap="onBillRecord">
+    <image src="../../../images/jilu.png" />
+    <view class="desc">记一笔</view>
+  </view>
+

@@ -1,0 +1,4 @@
+<view style="margin: 16px">参赛版本</view>
+<i-card title="V0.1.0" extra="评估版本" >
+    <view slot="content">完成了程序的主要业务逻辑和部分便民功能</view>
+</i-card>

@@ -1,0 +1,27 @@
+<i-panel title="{{topic2}}">
+        <view class='ui_uploader_cell'>
+          <view class='ui_uploader_item' wx:for="{{uploaderList}}" wx:key="{{index}}">
+          <icon class='ui_uploader_item_icon' bindtap='clearImg' data-index="{{index}}" type="clear" size="20" color="red"/>
+          <image bindtap='showImg' data-index="{{index}}" src='{{item}}'></image>
+          </view>
+          <view class='ui_uploader' bindtap='upload' wx:if="{{showUpload}}"></view>
+        </view>
+</i-panel>
+
+<i-panel title='{{topic}}'>
+        <view class='ui_uploader_cell'>
+          <view class='ui_uploader_item' wx:for="{{imgUrl}}" wx:key="{{index}}">
+          <image bindtap='showImg1' data-index="{{index}}" src='{{item}}'></image>
+          </view>
+        </view>
+</i-panel>
+
+
+
+
+<view>
+  <view class="start-record" bindtap='upload'>
+    <view class="desc">上传照片</view>
+  </view>
+</view>
+<i-toast id="toast" />

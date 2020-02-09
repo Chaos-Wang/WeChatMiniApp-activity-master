@@ -1,0 +1,15 @@
+<!--pages/check/check.wxml-->
+  <map
+  class="map"
+  id="check" 
+  scale='16' 
+  style="width: 100%; height: 100vh;"
+  longitude="{{ac_lng}}"
+  latitude="{{ac_lat}}"
+  markers="{{markers}}"
+>    
+  <cover-view class="start-record" bindtap="locationCheck">
+    <cover-image src="../../../images/jilu.png" style="width:30%; height: 30%;"/>
+    <cover-view class="desc" style='color:#fff'>点击签到</cover-view>
+  </cover-view>
+</map>
