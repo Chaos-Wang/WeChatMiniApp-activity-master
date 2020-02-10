@@ -39,7 +39,7 @@ const CONF = {
    	serverHost: '',
     tunnelServerUrl: 'http://tunnel.ws.qcloud.la',
     tunnelSignatureKey: '',
-    qcloudAppId: '1255465043',
+    qcloudAppId: '',
   	// 腾讯云相关配置可以查看云 API 秘钥控制台：https://console.cloud.tencent.com/capi
     qcloudSecretId: '',
     qcloudSecretKey: '',
